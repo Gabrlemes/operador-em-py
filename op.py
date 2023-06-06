@@ -9,12 +9,12 @@ def eh_incognita(valor):
 operacoes_opostas = {
     "+": "-",
     "-": "+",
-    "*": "/",
-    "/": "*"
+    "/": "*",
+    "*": "/"
 }
 
 
-def operar(formula):
+def operar(formula): 
     # encontrar o "=" e dividir em 2 partes
     partes = formula.split('=')
     # encontrar o operador no lado direito
@@ -29,10 +29,11 @@ def operar(formula):
     valore = partes[0].strip()    
     # decidir q operação sera feita
     if eh_incognita(valore):
-        res = valores[0] op valores[1]
+        res = valores[0] op-valores[1]
         A = float(valores[0])
         B = float(valores[1])
-        op # trocar
+       # trocar
+        op 
     elif eh_incognita(valores[0]):
         A = float(valore)
         B = float(valores[1])
@@ -58,4 +59,3 @@ def operar(formula):
 
 if __name__ == "__main__":
     print(operar("8 = 4 + t")) 
-
